@@ -1,0 +1,151 @@
+.news {
+    margin: 1.5rem 0;
+    padding: 0 1.5rem;
+
+    &__header {
+        margin: 0 0 0.75rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 1rem;
+    }
+
+    &__title {
+        margin: 0;
+
+        font-weight: 900;
+    }
+
+    &__dots {
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.25rem;
+
+        list-style-type: none;
+    }
+
+    &__list {
+        margin: 0 0 1rem;
+        padding: 0;
+
+        transition: all 0.3s;
+
+        list-style-type: none;
+    }
+}
+
+.article {
+    width: 100%;
+
+    border: 0.125rem solid $contrast-color;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 0.5rem;
+
+    background-color: $light-color;
+
+    overflow: hidden;
+
+    &__picture {
+        width: 100%;
+        height: 10rem;
+
+        object-fit: cover;
+    }
+
+    &__content {
+        padding: 1rem 0.75rem;
+    }
+
+    &__date {
+        margin-bottom: 0.5rem;
+        display: block;
+
+        font-weight: 600;
+    }
+
+    &__paragraph {
+        margin: 0;
+    }
+
+    &__more {
+        color: $contrast-color;
+    }
+
+    &__button {
+        padding: 1.5rem 2rem;
+        display: block;
+
+        font-size: 1rem;
+
+        text-align: center;
+        text-decoration: none;
+
+        color: $main-color;
+        background-color: $contrast-color;
+
+        border-radius: 0.5rem;
+
+        &::after {
+            content: '→';
+        }
+    }
+}
+
+.dots {
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__button {
+        width: 1rem;
+        height: 1rem;
+        padding: 0;
+
+        position: relative;
+
+        border-color: $contrast-color;
+        border-style: solid;
+        border-radius: 50%;
+
+        font-size: 0.01rem;
+
+        background-color: transparent;
+
+        &::before {
+            content: '';
+
+            width: 0rem;
+            height: 0rem;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            background-color: $contrast-color;
+
+            border-radius: 50%;
+
+            transition: all 0.1s;
+        }
+
+        &--current {
+            &::before {
+                width: 0.5rem;
+                height: 0.5rem;
+            }
+        }
+    }
+}

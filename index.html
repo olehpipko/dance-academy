@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dance Academy</title>
+
+        <link rel="stylesheet" href="./assets/css/main.min.css" />
+    </head>
+    <body>
+        <header class="header">
+            <section class="header__top">
+                <img
+                    src="./assets/img/logo.svg"
+                    alt=""
+                    class="header__logo logo"
+                />
+                <button
+                    class="header__burger burger burger--open"
+                    aria-label="Меню навігації"
+                >
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+            </section>
+            <nav class="header__navigation navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <p class="navigation__block">
+                            <a href="#" class="navigation__link">
+                                <span>Вступ</span>
+                            </a>
+                            <button
+                                class="navigation__button navigation__button--show"
+                            >
+                                <img
+                                    class="navigation__arrow"
+                                    src="./assets/img/nav-arrow.svg"
+                                    alt=""
+                                />
+                            </button>
+                        </p>
+                        <ul class="navigation__subnavigation">
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Реєстрація вступника 2024</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Напрямки підготовки</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Вища освіта</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Фахова передвища освіта</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Хореографічна школа</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navigation__item">
+                        <p class="navigation__block">
+                            <a href="#" class="navigation__link">
+                                <span>Академія</span>
+                            </a>
+                            <button
+                                class="navigation__button navigation__button--show"
+                            >
+                                <img
+                                    class="navigation__arrow"
+                                    src="./assets/img/nav-arrow.svg"
+                                    alt=""
+                                />
+                            </button>
+                        </p>
+                        <ul class="navigation__subnavigation">
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Про академію</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Річний звіт</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Серж Лифар</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Керівництво</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Структура</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <p class="navigation__block">
+                                    <a href="#" class="navigation__link">
+                                        <span>Вчена рада</span>
+                                    </a>
+                                    <button
+                                        class="navigation__button navigation__button--show"
+                                    >
+                                        <img
+                                            class="navigation__arrow"
+                                            src="./assets/img/nav-arrow.svg"
+                                            alt=""
+                                        />
+                                    </button>
+                                </p>
+                                <ul class="navigation__subnavigation">
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">
+                                            <span>Склад</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">
+                                            <span>
+                                                Матеріали засідань Вченої ради
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navigation__item">
+                                <p class="navigation__block">
+                                    <a href="#" class="navigation__link">
+                                        <span>
+                                            Кафедра хореографічних та мистецьких
+                                            дисциплін
+                                        </span>
+                                    </a>
+                                    <button
+                                        class="navigation__button navigation__button--show"
+                                    >
+                                        <img
+                                            class="navigation__arrow"
+                                            src="./assets/img/nav-arrow.svg"
+                                            alt=""
+                                        />
+                                    </button>
+                                </p>
+                                <ul class="navigation__subnavigation">
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">
+                                            <span>Склад</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">
+                                            <span>
+                                                Матеріали засідань кафедри
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navigation__item">
+                                <p class="navigation__block">
+                                    <a href="#" class="navigation__link">
+                                        <span>
+                                            Кафедра теоретичних дисциплін
+                                        </span>
+                                    </a>
+                                    <button
+                                        class="navigation__button navigation__button--show"
+                                    >
+                                        <img
+                                            class="navigation__arrow"
+                                            src="./assets/img/nav-arrow.svg"
+                                            alt=""
+                                        />
+                                    </button>
+                                </p>
+                                <ul class="navigation__subnavigation">
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">
+                                            <span>Склад</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">
+                                            <span>
+                                                Матеріали засідань кафедри
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navigation__item">
+                                <p class="navigation__block">
+                                    <a href="#" class="navigation__link">
+                                        <span>Хореографічна школа</span>
+                                    </a>
+                                    <button
+                                        class="navigation__button navigation__button--show"
+                                    >
+                                        <img
+                                            class="navigation__arrow"
+                                            src="./assets/img/nav-arrow.svg"
+                                            alt=""
+                                        />
+                                    </button>
+                                </p>
+                                <ul class="navigation__subnavigation">
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">
+                                            <span>Основна інформація</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Базова середня освіта</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Школа-студія</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Театрально-філармонічний центр</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Костюмерно-пошивочний відділ</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Адміністративні підрозділи</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navigation__item">
+                        <p class="navigation__block">
+                            <a href="#" class="navigation__link">
+                                <span>Освітній процес</span>
+                            </a>
+                            <button
+                                class="navigation__button navigation__button--show"
+                            >
+                                <img
+                                    class="navigation__arrow"
+                                    src="./assets/img/nav-arrow.svg"
+                                    alt=""
+                                />
+                            </button>
+                        </p>
+                        <ul class="navigation__subnavigation">
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Науково-методична діяльність</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Практика</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Бібліотека</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Моніторінг якості освіти</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Договори про співпрацю</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Експертні висновки</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Інформація про освітній процес</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Підвищення кваліфікації</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navigation__item">
+                        <p class="navigation__block">
+                            <a href="#" class="navigation__link">
+                                <span>ОПП хореографія</span>
+                            </a>
+                            <button
+                                class="navigation__button navigation__button--show"
+                            >
+                                <img
+                                    class="navigation__arrow"
+                                    src="./assets/img/nav-arrow.svg"
+                                    alt=""
+                                />
+                            </button>
+                        </p>
+                        <ul class="navigation__subnavigation">
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Бакалавр</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Фаховий молодший бакалавр</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">
+                            <span>Випускники академії</span>
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <p class="navigation__block">
+                            <a href="#" class="navigation__link">
+                                <span>Творча діяльність</span>
+                            </a>
+                            <button
+                                class="navigation__button navigation__button--show"
+                            >
+                                <img
+                                    class="navigation__arrow"
+                                    src="./assets/img/nav-arrow.svg"
+                                    alt=""
+                                />
+                            </button>
+                        </p>
+                        <ul class="navigation__subnavigation">
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Концерти</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Вистави</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Публікації</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navigation__item">
+                        <p class="navigation__block">
+                            <a href="#" class="navigation__link">
+                                <span>Публічна інформація</span>
+                            </a>
+                            <button
+                                class="navigation__button navigation__button--show"
+                            >
+                                <img
+                                    class="navigation__arrow"
+                                    src="./assets/img/nav-arrow.svg"
+                                    alt=""
+                                />
+                            </button>
+                        </p>
+                        <ul class="navigation__subnavigation">
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Установчі документи</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Ліцензії та сертифікати</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>
+                                        Ліцензований обсяг та фактична кількість
+                                        здобувачів освіти
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Нормативні документи</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Звіти</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Вибори директора</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Вакансії</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Відомості про гуртожитки</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Перелік додаткових послуг</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Умови доступності</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>
+                                        Безбар’єрність КМАТ імені Сержа Лифаря
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link">
+                                    <span>Наглядова рада </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">
+                            <span>Контакти</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navigation__socials socials">
+                    <li class="socials__item">
+                        <a href="#" class="socials__link">
+                            <svg
+                                width="32"
+                                height="32"
+                                viewBox="0 0 32 32"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="socials__icon socials__icon--light"
+                            >
+                                <path
+                                    d="M17.0831 0.0327725C25.2022 0.0327725 31.8451 6.67566 31.8451 14.7948V17.1012C31.8451 25.2203 25.2021 31.8632 17.0831 31.8632H14.7767C6.65757 31.8632 0.0146773 25.2203 0.0146773 17.1012V14.7948C0.0146773 6.67566 6.65757 0.0327725 14.7767 0.0327725H17.0831ZM16.2201 8.03304L16.0147 8.03277C14.3044 8.03277 12.5942 8.0893 12.5942 8.0893C10.0962 8.0893 8.07121 10.1143 8.07121 12.6123C8.07121 12.6123 8.01929 14.0808 8.01496 15.6571L8.01468 15.8632C8.01468 17.628 8.07121 19.4533 8.07121 19.4533C8.07121 21.9512 10.0962 23.9762 12.5942 23.9762C12.5942 23.9762 14.1932 24.0328 15.8451 24.0328C17.61 24.0328 19.4917 23.9762 19.4917 23.9762C21.9897 23.9762 23.9581 22.0078 23.9581 19.5098C23.9581 19.5098 24.0147 17.7051 24.0147 15.9763L24.0136 15.5705C24.006 14.0194 23.9581 12.5557 23.9581 12.5557C23.9581 10.0578 21.9897 8.0893 19.4917 8.0893C19.4917 8.0893 17.8634 8.0372 16.2201 8.03304ZM16.0147 9.47273C17.4171 9.47273 19.2152 9.51911 19.2152 9.51911C21.2636 9.51911 22.5283 10.7838 22.5283 12.8322C22.5283 12.8322 22.5747 14.5996 22.5747 15.9863C22.5747 17.404 22.5283 19.2333 22.5283 19.2333C22.5283 21.2816 21.2636 22.5463 19.2152 22.5463C19.2152 22.5463 17.6251 22.5853 16.2453 22.5918L15.8756 22.5927C14.5211 22.5927 12.8706 22.5463 12.8706 22.5463C10.8223 22.5463 9.50106 21.225 9.50106 19.1767C9.50106 19.1767 9.45468 17.3408 9.45468 15.8937C9.45468 14.5391 9.50106 12.8322 9.50106 12.8322C9.50106 10.7838 10.8224 9.51911 12.8706 9.51911C12.8706 9.51911 14.6122 9.47273 16.0147 9.47273ZM16.0146 11.9347C13.7513 11.9347 11.9166 13.7694 11.9166 16.0327C11.9166 18.296 13.7513 20.1308 16.0146 20.1308C18.2779 20.1308 20.1127 18.296 20.1127 16.0327C20.1127 13.7694 18.2779 11.9347 16.0146 11.9347ZM16.0146 13.366C17.4874 13.366 18.6813 14.5599 18.6813 16.0327C18.6813 17.5055 17.4874 18.6994 16.0146 18.6994C14.5419 18.6994 13.348 17.5055 13.348 16.0327C13.348 14.5599 14.5419 13.366 16.0146 13.366ZM20.3088 10.7975C19.7619 10.7975 19.3186 11.243 19.3186 11.7926C19.3186 12.3421 19.7619 12.7876 20.3088 12.7876C20.8556 12.7876 21.2989 12.3421 21.2989 11.7926C21.2989 11.243 20.8556 10.7975 20.3088 10.7975Z"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="#" class="socials__link">
+                            <svg
+                                width="32"
+                                height="32"
+                                viewBox="0 0 32 32"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="socials__icon socials__icon--light"
+                            >
+                                <path
+                                    d="M13.8687 19.0812L19.1062 16.0063L13.8687 12.9312V19.0812Z"
+                                />
+                                <path
+                                    d="M16 0C7.1625 0 0 7.1625 0 16C0 24.8375 7.1625 32 16 32C24.8375 32 32 24.8375 32 16C32 7.1625 24.8375 0 16 0ZM24 18.8625C24 21.6187 21.2437 21.6187 21.2437 21.6187H10.7562C8 21.6187 8 18.8625 8 18.8625V13.1437C8 10.3875 10.7562 10.3875 10.7562 10.3875H21.2437C24 10.3875 24 13.1437 24 13.1437V18.8625Z"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="#" class="socials__link">
+                            <svg
+                                width="32"
+                                height="32"
+                                viewBox="0 0 32 32"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="socials__icon socials__icon--light"
+                            >
+                                <path
+                                    d="M31.9997 15.901C31.9623 12.8332 31.0543 9.83993 29.3826 7.27387C27.711 4.70781 25.3455 2.67578 22.5646 1.4171C19.7836 0.158419 16.7031 -0.274483 13.6858 0.169346C10.6686 0.613195 7.84015 1.91528 5.53374 3.92232C3.22732 5.92934 1.53893 8.5577 0.667403 11.4978C-0.204102 14.438 -0.222463 17.5675 0.614521 20.5178C1.45151 23.4681 3.10895 26.1162 5.39168 28.1505C7.67439 30.1848 10.4873 31.5205 13.4992 32V20.5898H9.49908V15.901H13.4992V12.3391C13.4066 11.5109 13.4958 10.6724 13.7606 9.88263C14.0254 9.09289 14.4592 8.37126 15.0314 7.76865C15.6036 7.16603 16.3003 6.69712 17.0723 6.39505C17.8443 6.09295 18.6729 5.96502 19.4993 6.02032C20.699 6.03684 21.8958 6.14449 23.0795 6.3423V10.367H21.0794C20.7346 10.3233 20.3842 10.3581 20.0546 10.4688C19.7248 10.5795 19.4239 10.7634 19.1743 11.0068C18.9247 11.2502 18.7327 11.547 18.6125 11.8751C18.4921 12.2033 18.4467 12.5544 18.4793 12.9026V15.9413H22.9194L22.1994 20.6301H18.4993V31.8994C22.2792 31.2979 25.7197 29.3531 28.1966 26.4179C30.6735 23.4826 32.0227 19.7515 31.9997 15.901Z"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <img
+                    src="./assets/img/nav-logo.svg"
+                    alt=""
+                    class="navigation__logo"
+                />
+            </nav>
+        </header>
+        <main class="content">
+            <section class="banner">
+                <ul class="banner__list">
+                    <li class="banner__item">
+                        <picture>
+                            <source
+                                srcset="
+                                    https://scontent.fiev21-2.fna.fbcdn.net/v/t39.30808-6/445248279_942480134556145_2625915162839236057_n.jpg?stp=dst-jpg_s960x960&_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=KzFUc6dwHG8Q7kNvgH28wzo&_nc_ht=scontent.fiev21-2.fna&oh=00_AYBzLGDOBtrdbgH9PFe5GEn1ZGS-uQqi3erd5XENoAvL6g&oe=6679F7BB
+                                "
+                                media="(min-width: 600px)"
+                            />
+                            <img
+                                src="https://scontent.fiev21-2.fna.fbcdn.net/v/t39.30808-6/445248279_942480134556145_2625915162839236057_n.jpg?stp=dst-jpg_s960x960&_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=KzFUc6dwHG8Q7kNvgH28wzo&_nc_ht=scontent.fiev21-2.fna&oh=00_AYBzLGDOBtrdbgH9PFe5GEn1ZGS-uQqi3erd5XENoAvL6g&oe=6679F7BB"
+                                alt="Banner Image"
+                                class="banner__image"
+                            />
+                        </picture>
+                    </li>
+                    <li class="banner__item">
+                        <picture>
+                            <source
+                                srcset="
+                                    https://scontent.fiev21-1.fna.fbcdn.net/v/t39.30808-6/447667544_947487514055407_9109975840243530598_n.jpg?stp=dst-jpg_s960x960&_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=K_SLPcIajS4Q7kNvgEOXiQJ&_nc_ht=scontent.fiev21-1.fna&oh=00_AYC47RJI7KdkZm22ATqx8Hq6aCRgVBdax_nqtFp5SP8EAA&oe=6679F550
+                                "
+                                media="(min-width: 600px)"
+                            />
+                            <img
+                                src="https://scontent.fiev21-1.fna.fbcdn.net/v/t39.30808-6/447667544_947487514055407_9109975840243530598_n.jpg?stp=dst-jpg_s960x960&_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=K_SLPcIajS4Q7kNvgEOXiQJ&_nc_ht=scontent.fiev21-1.fna&oh=00_AYC47RJI7KdkZm22ATqx8Hq6aCRgVBdax_nqtFp5SP8EAA&oe=6679F550"
+                                alt="Banner Image"
+                                class="banner__image"
+                            />
+                        </picture>
+                    </li>
+                    <li class="banner__item">
+                        <picture>
+                            <source
+                                srcset="
+                                    https://scontent.fiev21-1.fna.fbcdn.net/v/t39.30808-6/445483710_943694154434743_4877028033876224189_n.jpg?stp=dst-jpg_s960x960&_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=x2J60RK2NWcQ7kNvgGOmYMp&_nc_ht=scontent.fiev21-1.fna&oh=00_AYDZmzh75ZU4dFa7Z50ZnU7-pa8DmwekunaVc0mgmdEBKw&oe=6679E152
+                                "
+                                media="(min-width: 600px)"
+                            />
+                            <img
+                                src="https://scontent.fiev21-1.fna.fbcdn.net/v/t39.30808-6/445483710_943694154434743_4877028033876224189_n.jpg?stp=dst-jpg_s960x960&_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=x2J60RK2NWcQ7kNvgGOmYMp&_nc_ht=scontent.fiev21-1.fna&oh=00_AYDZmzh75ZU4dFa7Z50ZnU7-pa8DmwekunaVc0mgmdEBKw&oe=6679E152"
+                                alt="Banner Image"
+                                class="banner__image"
+                            />
+                        </picture>
+                    </li>
+                </ul>
+                <button class="banner__nav banner__nav--left"></button>
+                <button class="banner__nav banner__nav--right"></button>
+            </section>
+            <section class="news">
+                <header class="news__header">
+                    <h2 class="news__title">Останні новини</h2>
+                    <ul class="news__dots dots"></ul>
+                </header>
+                <ul class="news__list">
+                    <li class="news__article article">
+                        <a href="#">
+                            <picture>
+                                <img
+                                    src="./assets/img/articles/article-picture-3.jpg"
+                                    alt="9 червня 2024 року відбувся I Міжнародний конкурс танцю IDCUA."
+                                    class="article__picture"
+                                />
+                            </picture>
+                        </a>
+                        <article class="article__content">
+                            <data value="11.06.2024" class="article__date">
+                                11.06.2024
+                            </data>
+
+                            <p class="article__paragraph">
+                                9 червня 2024 року відбувся I Міжнародний
+                                конкурс танцю IDCUA.
+                            </p>
+                            <p class="article__paragraph">
+                                Учні і студенти Академії танцю Сержа Лифаря
+                                вибороли наступні нагороди…
+                                <a href="#" class="article__more">Більше</a>
+                            </p>
+                        </article>
+                    </li>
+                    <li class="news__article article">
+                        <a href="#">
+                            <picture>
+                                <img
+                                    src="./assets/img/articles/article-picture.jpg"
+                                    alt="До прем'єри 18 днів!"
+                                    class="article__picture"
+                                />
+                            </picture>
+                        </a>
+                        <article class="article__content">
+                            <data value="08.06.2024" class="article__date">
+                                08.06.2024
+                            </data>
+
+                            <p class="article__paragraph">«Болеро»</p>
+                            <p class="article__paragraph">
+                                До прем'єри 18 днів!
+                            </p>
+                            <p class="article__paragraph">
+                                26 червня в Національній опері України на
+                                звітному концерті...
+                                <a href="#" class="article__more">Більше</a>
+                            </p>
+                        </article>
+                    </li>
+                    <li class="news__article article">
+                        <a href="#">
+                            <picture>
+                                <img
+                                    src="./assets/img/articles/article-picture-1.jpg"
+                                    alt="Свято Останнього дзвоника"
+                                    class="article__picture"
+                                />
+                            </picture>
+                        </a>
+                        <article class="article__content">
+                            <data value="06.09.2024" class="article__date">
+                                09.06.2024
+                            </data>
+
+                            <p class="article__paragraph">
+                                Свято Останнього дзвоника
+                            </p>
+                            <p class="article__paragraph">
+                                Фотозвіт I та II відділення
+                            </p>
+                            <p class="article__paragraph">#АкадеміяЛифаря</p>
+                            <p class="article__paragraph">
+                                Фото: Марія Дука...
+                                <a href="#" class="article__more">Більше</a>
+                            </p>
+                        </article>
+                    </li>
+                    <li class="news__article article">
+                        <a href="#">
+                            <picture>
+                                <img
+                                    src="./assets/img/articles/article-picture-2.jpg"
+                                    alt="З Днем народження вітаємо Вікторію Голікову!"
+                                    class="article__picture"
+                                />
+                            </picture>
+                        </a>
+                        <article class="article__content">
+                            <data value="11.06.2024" class="article__date">
+                                11.06.2024
+                            </data>
+
+                            <p class="article__paragraph">
+                                З Днем народження вітаємо Вікторію Голікову!
+                                /Концертмейстер, спеціаліст вищої категорії/
+                                Нехай добрі ідеї будуть успішно реалізовані і
+                                доставлять радість і щастя…
+                                <a href="#" class="article__more">Більше</a>
+                            </p>
+                        </article>
+                    </li>
+                </ul>
+                <a href="#" class="article__button button">
+                    Переглянути всі новини
+                </a>
+            </section>
+            <section class="promo">
+                <iframe
+                    class="promo__frame"
+                    src="https://www.youtube.com/embed/eisiNBTcwQ0?si=Fbw503gu4JB_eyDM"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
+            </section>
+        </main>
+        <footer class="footer">
+            <section class="footer__main">
+                <div class="footer__left">
+                    <div class="footer__block">
+                        <img
+                            src="./assets/img/logo.svg"
+                            alt=""
+                            class="footer__logo"
+                        />
+                    </div>
+                    <div class="footer__block">
+                        <h4 class="footer__heading">Контакти</h4>
+                        <ul class="footer__contacts">
+                            <li class="footer__contact">
+                                <img
+                                    src="./assets/img/contacts/location-icon.svg"
+                                    alt=""
+                                    class="footer__icon"
+                                />
+                                Україна, м.Київ, вул. Данькевича, 4-а
+                            </li>
+                            <li class="footer__contact">
+                                <a
+                                    href="mailto:info@dance-academy.com.ua"
+                                    class="footer__link"
+                                >
+                                    <img
+                                        src="./assets/img/contacts/mail-icon.svg"
+                                        alt=""
+                                        class="footer__icon"
+                                    />
+                                    info@dance-academy.com.ua
+                                </a>
+                            </li>
+                            <li class="footer__contact">
+                                <a href="tel:380445308757" class="footer__link">
+                                    <img
+                                        src="./assets/img/contacts/phone-icon.svg"
+                                        alt=""
+                                        class="footer__icon"
+                                    />
+                                    +38 (044) 530-87-57
+                                </a>
+                            </li>
+                            <li class="footer__contact">
+                                <a href="fax:380445354425" class="footer__link">
+                                    <img
+                                        src="./assets/img/contacts/fax-icon.svg"
+                                        alt=""
+                                        class="footer__icon"
+                                    />
+                                    +38 (044) 535-4425
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__block">
+                        <h4 class="footer__heading">Соціальні мережі</h4>
+                        <ul class="footer__socials socials">
+                            <li class="socials__item">
+                                <a href="#" class="socials__link">
+                                    <svg
+                                        width="32"
+                                        height="32"
+                                        viewBox="0 0 32 32"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="socials__icon socials__icon--contrast"
+                                    >
+                                        <path
+                                            d="M17.0831 0.0327725C25.2022 0.0327725 31.8451 6.67566 31.8451 14.7948V17.1012C31.8451 25.2203 25.2021 31.8632 17.0831 31.8632H14.7767C6.65757 31.8632 0.0146773 25.2203 0.0146773 17.1012V14.7948C0.0146773 6.67566 6.65757 0.0327725 14.7767 0.0327725H17.0831ZM16.2201 8.03304L16.0147 8.03277C14.3044 8.03277 12.5942 8.0893 12.5942 8.0893C10.0962 8.0893 8.07121 10.1143 8.07121 12.6123C8.07121 12.6123 8.01929 14.0808 8.01496 15.6571L8.01468 15.8632C8.01468 17.628 8.07121 19.4533 8.07121 19.4533C8.07121 21.9512 10.0962 23.9762 12.5942 23.9762C12.5942 23.9762 14.1932 24.0328 15.8451 24.0328C17.61 24.0328 19.4917 23.9762 19.4917 23.9762C21.9897 23.9762 23.9581 22.0078 23.9581 19.5098C23.9581 19.5098 24.0147 17.7051 24.0147 15.9763L24.0136 15.5705C24.006 14.0194 23.9581 12.5557 23.9581 12.5557C23.9581 10.0578 21.9897 8.0893 19.4917 8.0893C19.4917 8.0893 17.8634 8.0372 16.2201 8.03304ZM16.0147 9.47273C17.4171 9.47273 19.2152 9.51911 19.2152 9.51911C21.2636 9.51911 22.5283 10.7838 22.5283 12.8322C22.5283 12.8322 22.5747 14.5996 22.5747 15.9863C22.5747 17.404 22.5283 19.2333 22.5283 19.2333C22.5283 21.2816 21.2636 22.5463 19.2152 22.5463C19.2152 22.5463 17.6251 22.5853 16.2453 22.5918L15.8756 22.5927C14.5211 22.5927 12.8706 22.5463 12.8706 22.5463C10.8223 22.5463 9.50106 21.225 9.50106 19.1767C9.50106 19.1767 9.45468 17.3408 9.45468 15.8937C9.45468 14.5391 9.50106 12.8322 9.50106 12.8322C9.50106 10.7838 10.8224 9.51911 12.8706 9.51911C12.8706 9.51911 14.6122 9.47273 16.0147 9.47273ZM16.0146 11.9347C13.7513 11.9347 11.9166 13.7694 11.9166 16.0327C11.9166 18.296 13.7513 20.1308 16.0146 20.1308C18.2779 20.1308 20.1127 18.296 20.1127 16.0327C20.1127 13.7694 18.2779 11.9347 16.0146 11.9347ZM16.0146 13.366C17.4874 13.366 18.6813 14.5599 18.6813 16.0327C18.6813 17.5055 17.4874 18.6994 16.0146 18.6994C14.5419 18.6994 13.348 17.5055 13.348 16.0327C13.348 14.5599 14.5419 13.366 16.0146 13.366ZM20.3088 10.7975C19.7619 10.7975 19.3186 11.243 19.3186 11.7926C19.3186 12.3421 19.7619 12.7876 20.3088 12.7876C20.8556 12.7876 21.2989 12.3421 21.2989 11.7926C21.2989 11.243 20.8556 10.7975 20.3088 10.7975Z"
+                                        />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="#" class="socials__link">
+                                    <svg
+                                        width="32"
+                                        height="32"
+                                        viewBox="0 0 32 32"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="socials__icon socials__icon--contrast"
+                                    >
+                                        <path
+                                            d="M13.8687 19.0812L19.1062 16.0063L13.8687 12.9312V19.0812Z"
+                                        />
+                                        <path
+                                            d="M16 0C7.1625 0 0 7.1625 0 16C0 24.8375 7.1625 32 16 32C24.8375 32 32 24.8375 32 16C32 7.1625 24.8375 0 16 0ZM24 18.8625C24 21.6187 21.2437 21.6187 21.2437 21.6187H10.7562C8 21.6187 8 18.8625 8 18.8625V13.1437C8 10.3875 10.7562 10.3875 10.7562 10.3875H21.2437C24 10.3875 24 13.1437 24 13.1437V18.8625Z"
+                                        />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="#" class="socials__link">
+                                    <svg
+                                        width="32"
+                                        height="32"
+                                        viewBox="0 0 32 32"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="socials__icon socials__icon--contrast"
+                                    >
+                                        <path
+                                            d="M31.9997 15.901C31.9623 12.8332 31.0543 9.83993 29.3826 7.27387C27.711 4.70781 25.3455 2.67578 22.5646 1.4171C19.7836 0.158419 16.7031 -0.274483 13.6858 0.169346C10.6686 0.613195 7.84015 1.91528 5.53374 3.92232C3.22732 5.92934 1.53893 8.5577 0.667403 11.4978C-0.204102 14.438 -0.222463 17.5675 0.614521 20.5178C1.45151 23.4681 3.10895 26.1162 5.39168 28.1505C7.67439 30.1848 10.4873 31.5205 13.4992 32V20.5898H9.49908V15.901H13.4992V12.3391C13.4066 11.5109 13.4958 10.6724 13.7606 9.88263C14.0254 9.09289 14.4592 8.37126 15.0314 7.76865C15.6036 7.16603 16.3003 6.69712 17.0723 6.39505C17.8443 6.09295 18.6729 5.96502 19.4993 6.02032C20.699 6.03684 21.8958 6.14449 23.0795 6.3423V10.367H21.0794C20.7346 10.3233 20.3842 10.3581 20.0546 10.4688C19.7248 10.5795 19.4239 10.7634 19.1743 11.0068C18.9247 11.2502 18.7327 11.547 18.6125 11.8751C18.4921 12.2033 18.4467 12.5544 18.4793 12.9026V15.9413H22.9194L22.1994 20.6301H18.4993V31.8994C22.2792 31.2979 25.7197 29.3531 28.1966 26.4179C30.6735 23.4826 32.0227 19.7515 31.9997 15.901Z"
+                                        />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__block">
+                        <h4 class="footer__heading">Партнери</h4>
+                        <ul class="footer__partners">
+                            <li class="footer__partner partner">
+                                <img
+                                    src="./assets/img/partners/footer-partner-picture-4.png"
+                                    alt=""
+                                    class="partner__picture"
+                                />
+                            </li>
+                            <li class="footer__partner partner">
+                                <img
+                                    src="./assets/img/partners/footer-partner-picture-3.png"
+                                    alt=""
+                                    class="partner__picture"
+                                />
+                            </li>
+                            <li class="footer__partner partner">
+                                <img
+                                    src="./assets/img/partners/footer-partner-picture-2.png"
+                                    alt=""
+                                    class="partner__picture"
+                                />
+                            </li>
+                            <li class="footer__partner partner">
+                                <img
+                                    src="./assets/img/partners/footer-partner-picture-1.png"
+                                    alt=""
+                                    class="partner__picture"
+                                />
+                            </li>
+                            <li class="footer__partner partner">
+                                <img
+                                    src="./assets/img/partners/footer-partner-picture.png"
+                                    alt=""
+                                    class="partner__picture"
+                                />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="footer__copyright copyright">
+                <p class="copyright__value">
+                    2024 © Київська муніципальна академія танцю імені Сержа
+                    Лифаря
+                </p>
+            </section>
+        </footer>
+        <script src="./assets/js/main.js" type="module"></script>
+    </body>
+</html>
