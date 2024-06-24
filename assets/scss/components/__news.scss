@@ -96,6 +96,13 @@
 
         &::after {
             content: '→';
+
+            display: inline-block;
+
+            vertical-align: baseline;
+
+            transform: translateY(-0.1rem);
+            transition: all 0.1s;
         }
     }
 }

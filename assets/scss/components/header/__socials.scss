@@ -1,0 +1,28 @@
+.socials {
+    width: 100%;
+
+    padding: 0;
+    margin: auto 0 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    list-style-type: none;
+
+    &__icon {
+        height: 2rem;
+
+        &--light {
+            fill: $main-color;
+        }
+
+        &--dark {
+            fill: $dark-color;
+        }
+
+        &--contrast {
+            fill: $contrast-color;
+        }
+    }
+}

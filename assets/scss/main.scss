@@ -1,6 +1,6 @@
 //  Global
-@import './global/__colors.scss';
-@import './global/__fonts.scss';
+@import './global/__colors';
+@import './global/__fonts';
 
 *,
 *::before,
@@ -30,9 +30,19 @@ button {
 }
 
 //  Components
-@import './components/__header.scss';
-@import './components/__footer.scss';
+@import './components/header/__header';
+@import './components/__footer';
 
-@import './components/__banner.scss';
-@import './components/__news.scss';
-@import './components/__promo.scss';
+@import './components/__banner';
+@import './components/__news';
+@import './components/__promo';
+
+//  Desktop
+@media (min-width: 992px) {
+    @import './adaptive/desktop/__header';
+    @import './adaptive/desktop/__footer';
+
+    @import './adaptive/desktop/__banner';
+    @import './adaptive/desktop/__news';
+    @import './adaptive/desktop/__promo';
+}

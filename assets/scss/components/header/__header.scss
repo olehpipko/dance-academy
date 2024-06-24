@@ -1,0 +1,42 @@
+@import '__navigation';
+@import '__socials';
+
+.header {
+    padding-top: 4.5rem;
+
+    position: relative;
+    z-index: 1;
+
+    &__top {
+        padding: 1rem 1.5rem;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        background-color: $main-color;
+
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+
+    &__logo {
+        height: 3rem;
+    }
+
+    &__navigation {
+        background-color: $contrast-color;
+
+        color: $light-color;
+    }
+
+    &__socials {
+        display: none;
+    }
+}

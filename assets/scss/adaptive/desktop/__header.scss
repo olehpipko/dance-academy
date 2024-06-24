@@ -1,0 +1,171 @@
+body {
+    padding-top: 8.5rem;
+}
+
+.header {
+    padding: 0;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    border-radius: 0 0 1rem 1rem;
+    background-color: $main-color;
+
+    &__top {
+        padding: 0.75rem 2rem;
+        margin: auto;
+        width: 1244px;
+        max-width: 100%;
+
+        position: relative;
+
+        border-radius: 0;
+    }
+
+    &__logo {
+        height: 4.5rem;
+    }
+
+    &__burger {
+        display: none;
+    }
+
+    &__socials {
+        display: flex;
+    }
+}
+
+.socials {
+    margin: 0;
+    width: auto;
+
+    &__icon {
+        transition: all 0.1s;
+    }
+
+    &__link:hover &__icon,
+    &__link:focus &__icon {
+        fill: $dark-color;
+    }
+}
+
+.navigation {
+    padding: 0;
+
+    position: relative;
+
+    display: block;
+
+    border-radius: 0 0 0.5rem 0.5rem;
+
+    overflow: inherit;
+
+    &__logo,
+    &__socials {
+        display: none;
+    }
+
+    &__button {
+        position: absolute;
+        right: 0;
+
+        align-items: center;
+
+        pointer-events: none;
+    }
+
+    &__list {
+        margin: auto;
+        padding: 0 2rem;
+        width: 1244px;
+        max-width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    &__item,
+    &__item:last-child {
+        margin: 0;
+        padding: 0;
+        border-width: 0;
+
+        position: relative;
+        z-index: 0;
+    }
+
+    &__link {
+        padding: 0.75rem 1rem 0.75rem 0;
+        max-width: inherit;
+        width: 100%;
+
+        display: inline-block;
+
+        &:hover {
+            color: $main-color;
+
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__subnavigation {
+        padding: 0;
+        min-width: max-content;
+        height: auto;
+        border-bottom: 0.05rem solid $main-color;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        background-color: $contrast-color;
+
+        opacity: 0;
+
+        pointer-events: none;
+
+        overflow: inherit;
+
+        &:hover {
+            opacity: 1;
+            pointer-events: inherit;
+        }
+    }
+
+    &__subnavigation &__subnavigation {
+        top: 0;
+        left: 100%;
+    }
+
+    &__subnavigation &__link {
+        max-width: 20rem;
+        padding: 0.5rem 1rem;
+
+        border-top: 0.05rem solid $main-color;
+
+        display: block;
+    }
+
+    &__subnavigation &__item:has(&__subnavigation) &__link {
+        padding-right: 2rem;
+    }
+
+    &__subnavigation &__button {
+        padding-right: 0.5rem;
+    }
+
+    &__item:hover > &__subnavigation {
+        opacity: 1;
+        pointer-events: inherit;
+    }
+
+    &__item:hover > &__block > &__button > &__arrow {
+        transform: rotate(-180deg);
+    }
+}

@@ -61,7 +61,7 @@ export default class Carousel {
         list.style.position = 'relative';
         list.style.overflow = 'hidden';
         list.style.zIndex = 0;
-        list.style.height = this.listItems[0].offsetHeight + 'px';
+        list.style.height = `${this.listItems[0].offsetHeight}px`;
 
         this.positions = [];
 
@@ -71,7 +71,7 @@ export default class Carousel {
 
         for (let [i, listItem] of this.listItems.entries()) {
             listItem.style.position = 'absolute';
-            listItem.style.left = this.positions[i] + '%';
+            listItem.style.left = `${this.positions[i]}%`;
             listItem.style.transition = 'all 0.3s';
         }
     }
@@ -95,11 +95,11 @@ export default class Carousel {
         }
 
         for (let [i, listItem] of listItems.entries()) {
-            listItem.style.left = positions[i] + '%';
+            listItem.style.left = `${positions[i]}%`;
             listItem.style.zIndex = 0;
 
             if (positions[i] === 0) {
-                list.style.height = listItem.offsetHeight + 'px';
+                list.style.height = `${listItem.offsetHeight}px`;
                 listItem.style.zIndex = 1;
             }
         }

@@ -1,0 +1,123 @@
+.news {
+    margin: 4rem auto;
+    padding: 0 2rem;
+    width: 1244px;
+
+    &__header {
+        margin: 0;
+    }
+
+    &__title {
+        margin: 0 0 1.5rem;
+
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    &__dots {
+        display: none;
+    }
+
+    &__list {
+        height: auto !important;
+
+        display: grid;
+        grid-template-areas: 'a b b' 'a c d';
+        grid-template-columns: 1fr 1fr 1fr;
+
+        gap: 2rem;
+    }
+
+    &__article {
+        position: static !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &:nth-child(1) {
+            grid-area: a;
+
+            .article {
+                &__picture {
+                    height: 24.5rem;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            grid-area: b;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            .article {
+                &__picture {
+                    height: 15rem;
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            grid-area: c;
+
+            .article {
+                &__picture {
+                    height: 7rem;
+                }
+            }
+        }
+
+        &:nth-child(4) {
+            grid-area: d;
+
+            .article {
+                &__picture {
+                    height: 7rem;
+                }
+            }
+        }
+
+        .article {
+            &__cover {
+                width: 100%;
+                height: 100%;
+            }
+
+            &__picture {
+                min-height: 100%;
+
+                transition: all 0.2s;
+            }
+
+            &__link {
+                overflow: hidden;
+            }
+
+            &__link:hover .article__picture {
+                transform: scale(110%);
+            }
+
+            &__more {
+                transition: all 0.1s;
+
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
+
+.button {
+    display: inline-block;
+    border: 0.05rem solid $contrast-color;
+    transition: all 0.1s;
+
+    &:hover {
+        background-color: transparent;
+        color: $contrast-color;
+
+        &::after {
+            transform: translate(0.25rem, -0.1rem);
+        }
+    }
+}
