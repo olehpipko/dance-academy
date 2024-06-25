@@ -1,0 +1,36 @@
+.news {
+    &__list {
+        height: auto !important;
+
+        display: grid;
+        grid-template-areas: 'a b' 'c d';
+        grid-template-columns: 1fr 1fr;
+
+        gap: 1rem;
+    }
+
+    &__article {
+        position: static !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .article {
+            &__cover {
+                width: 100%;
+                height: 100%;
+            }
+
+            &__picture {
+                height: 8rem;
+                min-height: 100%;
+
+                transition: all 0.2s;
+            }
+
+            &__link {
+                overflow: hidden;
+            }
+        }
+    }
+}

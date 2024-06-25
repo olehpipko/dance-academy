@@ -6,7 +6,6 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    max-width: 100%;
 }
 
 html {
@@ -29,6 +28,32 @@ button {
     cursor: pointer;
 }
 
+.button {
+    padding: 1.5rem 2rem;
+    display: block;
+
+    font-size: 1rem;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: $main-color;
+    background-color: $contrast-color;
+
+    border-radius: 0.5rem;
+
+    &::after {
+        content: '→';
+
+        display: inline-block;
+
+        vertical-align: baseline;
+
+        transition: all 0.1s;
+        transform: translateY(-0.1rem);
+    }
+}
+
 //  Components
 @import './components/header/__header';
 @import './components/__footer';
@@ -37,8 +62,30 @@ button {
 @import './components/__news';
 @import './components/__promo';
 
+//  Tablet
+@media (min-width: 768px) {
+    @import './adaptive/tablet/__news';
+}
+
 //  Desktop
 @media (min-width: 992px) {
+    .button {
+        border: 0.05rem solid $contrast-color;
+
+        display: inline-block;
+
+        transition: all 0.1s;
+
+        &:hover {
+            color: $contrast-color;
+            background-color: transparent;
+
+            &::after {
+                transform: translate(0.25rem, -0.1rem);
+            }
+        }
+    }
+
     @import './adaptive/desktop/__header';
     @import './adaptive/desktop/__footer';
 

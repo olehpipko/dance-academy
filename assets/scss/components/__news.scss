@@ -1,4 +1,5 @@
 .news {
+    max-width: 100%;
     margin: 1.5rem 0;
     padding: 0 1.5rem;
 
@@ -78,32 +79,6 @@
 
     &__more {
         color: $contrast-color;
-    }
-
-    &__button {
-        padding: 1.5rem 2rem;
-        display: block;
-
-        font-size: 1rem;
-
-        text-align: center;
-        text-decoration: none;
-
-        color: $main-color;
-        background-color: $contrast-color;
-
-        border-radius: 0.5rem;
-
-        &::after {
-            content: '→';
-
-            display: inline-block;
-
-            vertical-align: baseline;
-
-            transform: translateY(-0.1rem);
-            transition: all 0.1s;
-        }
     }
 }
 

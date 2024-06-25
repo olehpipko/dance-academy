@@ -25,7 +25,7 @@
         grid-template-areas: 'a b b' 'a c d';
         grid-template-columns: 1fr 1fr 1fr;
 
-        gap: 2rem;
+        gap: 1rem;
     }
 
     &__article {
@@ -61,7 +61,7 @@
 
             .article {
                 &__picture {
-                    height: 7rem;
+                    height: 8rem;
                 }
             }
         }
@@ -71,7 +71,7 @@
 
             .article {
                 &__picture {
-                    height: 7rem;
+                    height: 8rem;
                 }
             }
         }
@@ -103,21 +103,6 @@
                     color: $main-color;
                 }
             }
-        }
-    }
-}
-
-.button {
-    display: inline-block;
-    border: 0.05rem solid $contrast-color;
-    transition: all 0.1s;
-
-    &:hover {
-        background-color: transparent;
-        color: $contrast-color;
-
-        &::after {
-            transform: translate(0.25rem, -0.1rem);
         }
     }
 }

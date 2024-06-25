@@ -99,7 +99,7 @@ body {
     }
 
     &__link {
-        padding: 0.75rem 1rem 0.75rem 0;
+        padding: 0.75rem 0;
         max-width: inherit;
         width: 100%;
 
@@ -112,6 +112,10 @@ body {
                 transform: rotate(180deg);
             }
         }
+    }
+
+    &__block &__link {
+        padding-right: 1rem;
     }
 
     &__subnavigation {
@@ -128,13 +132,12 @@ body {
 
         opacity: 0;
 
-        pointer-events: none;
-
         overflow: inherit;
 
+        &--showing,
         &:hover {
             opacity: 1;
-            pointer-events: inherit;
+            visibility: inherit;
         }
     }
 
@@ -157,12 +160,12 @@ body {
     }
 
     &__subnavigation &__button {
-        padding-right: 0.5rem;
+        padding: 0 0.5rem;
     }
 
     &__item:hover > &__subnavigation {
         opacity: 1;
-        pointer-events: inherit;
+        visibility: inherit;
     }
 
     &__item:hover > &__block > &__button > &__arrow {

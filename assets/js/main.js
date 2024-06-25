@@ -29,19 +29,151 @@ subNavBtns.forEach((btn) => {
 });
 
 //  Banner
-import Carousel from './carousel.js';
+let banner;
+const createBannerCarousel = () => {
+    if (banner) {
+        clearInterval(banner.runInterval);
+        banner.destroy(true);
+    }
 
-const bannerList = document.querySelector('.banner__list');
-const bannerNav = {
-    left: document.querySelector('.banner__nav--left'),
-    right: document.querySelector('.banner__nav--right'),
+    banner = new Siema({
+        selector: '.banner__list',
+        duration: 200,
+        easing: 'ease-out',
+        perPage: 1,
+        startIndex: 0,
+        draggable: true,
+        multipleDrag: true,
+        threshold: 20,
+        loop: true,
+        rtl: false,
+
+        onInit: () => {
+            //  Size of block
+            const bannerBlock = document.querySelector('.banner__list');
+            const slides = [...bannerBlock.querySelectorAll('.banner__item')];
+            bannerBlock.style.height = `${slides[0].offsetHeight}px`;
+
+            let maxHeight = slides[0].offsetHeight;
+            slides.forEach((slide) =>
+                slide.offsetHeight > maxHeight
+                    ? (maxHeight = slide.offsetHeight)
+                    : 0
+            );
+
+            //  Navigation
+            const bannerPrev = document.querySelector('.banner__nav--left');
+            const bannerNext = document.querySelector('.banner__nav--right');
+
+            bannerPrev.style.top = bannerNext.style.top =
+                maxHeight / 2 - bannerPrev.offsetHeight / 2 + 'px';
+
+            bannerPrev.onclick = () => banner.prev();
+            bannerNext.onclick = () => banner.next();
+        },
+        onChange: () => {
+            //  Size of block
+            banner.selector.style.height = `${
+                banner.innerElements[banner.currentSlide].offsetHeight
+            }px`;
+
+            //  Navigation
+            clearInterval(banner.runInterval);
+            banner.run();
+        },
+    });
+
+    banner.run = (time = 4000) => {
+        banner.runSet = true;
+        banner.runInterval = setInterval(() => banner.next(), time);
+    };
+    banner.run();
 };
 
-const bannerCarousel = new Carousel(bannerList, bannerNav);
-bannerCarousel.run();
+//  News
+let news;
+const dotsWrap = document.querySelector('.news__dots');
+dotsWrap.innerHTML = '';
 
-const newsCarousel = new Carousel(
-    document.querySelector('.news__list'),
-    null,
-    document.querySelector('.news__dots')
-);
+[...document.querySelector('.news__list').children].forEach((slide, i) => {
+    const dotItem = document.createElement('li');
+    dotItem.classList = 'dots__item';
+
+    const dotBtn = document.createElement('button');
+    dotBtn.classList = 'dots__button';
+    dotBtn.innerHTML = i + 1;
+
+    dotItem.append(dotBtn);
+    dotsWrap.append(dotItem);
+});
+const createNewsCarousel = (newsSelector = '.news__list') => {
+    const newsDots = document.querySelectorAll('.news__dots .dots__button');
+
+    if (news) news.destroy(true);
+    if (window.innerWidth <= 768)
+        news = new Siema({
+            selector: newsSelector,
+            duration: 200,
+            easing: 'ease-out',
+            perPage: {
+                600: 2,
+            },
+            startIndex: 0,
+            draggable: true,
+            multipleDrag: true,
+            threshold: 20,
+            loop: true,
+            rtl: false,
+            loop: true,
+
+            onInit: () => {
+                if (window.innerWidth <= 600) {
+                    const newsBlock = document.querySelector(newsSelector);
+                    const articleBlock = newsBlock.querySelector('.article');
+                    newsBlock.style.height = `${articleBlock.offsetHeight}px`;
+                } else {
+                    const wrap =
+                        document.querySelector(newsSelector).children[0];
+                    wrap.style.display = `flex`;
+                    wrap.style.gap = '1rem';
+                }
+
+                //  Dots
+                newsDots.forEach((dot) =>
+                    dot.classList.remove('dots__button--current')
+                );
+                newsDots[0].classList.add('dots__button--current');
+                newsDots.forEach((dot, i) => {
+                    dot.onclick = () => {
+                        newsDots.forEach((dot) =>
+                            dot.classList.remove('dots__button--current')
+                        );
+                        dot.classList.add('dots__button--current');
+
+                        news.goTo(i);
+                    };
+                });
+            },
+            onChange: () => {
+                if (window.innerWidth <= 600)
+                    news.selector.style.height = `${
+                        news.innerElements[news.currentSlide].offsetHeight
+                    }px`;
+
+                //  Dots
+                newsDots.forEach((dot) =>
+                    dot.classList.remove('dots__button--current')
+                );
+                newsDots[news.currentSlide].classList.add(
+                    'dots__button--current'
+                );
+            },
+        });
+};
+
+createBannerCarousel();
+createNewsCarousel();
+window.onresize = () => {
+    createBannerCarousel();
+    createNewsCarousel();
+};
