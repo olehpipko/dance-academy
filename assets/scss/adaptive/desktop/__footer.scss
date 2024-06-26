@@ -56,6 +56,8 @@
 
             display: inline;
 
+            font-size: 0.75rem;
+
             &:hover {
                 color: $contrast-color;
             }
@@ -69,6 +71,14 @@
     &__link {
         &:hover {
             color: $contrast-color;
+
+            .footer__icon {
+                fill: $contrast-color;
+            }
         }
+    }
+
+    &__icon {
+        transition: all 0.1s;
     }
 }

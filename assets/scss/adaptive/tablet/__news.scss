@@ -1,4 +1,8 @@
 .news {
+    &__dots {
+        display: none;
+    }
+
     &__list {
         height: auto !important;
 

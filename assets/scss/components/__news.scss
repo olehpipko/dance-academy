@@ -53,8 +53,6 @@
 
     background-color: $light-color;
 
-    overflow: hidden;
-
     &__picture {
         width: 100%;
         height: 10rem;
@@ -117,6 +115,25 @@
             transform: translate(-50%, -50%);
 
             background-color: $contrast-color;
+
+            border-radius: 50%;
+
+            transition: all 0.1s;
+        }
+
+        &::after {
+            content: '';
+
+            width: 0.25rem;
+            height: 0.25rem;
+
+            position: absolute;
+            top: 25%;
+            left: 75%;
+
+            transform: translate(-75%, -25%);
+
+            background-color: $light-color;
 
             border-radius: 50%;
 

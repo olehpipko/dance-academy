@@ -14,10 +14,6 @@
         line-height: 4rem;
     }
 
-    &__dots {
-        display: none;
-    }
-
     &__list {
         height: auto !important;
 
@@ -34,12 +30,24 @@
         flex-direction: column;
         justify-content: space-between;
 
+        .article {
+            &__cover {
+                display: block;
+
+                overflow: hidden;
+            }
+        }
+
         &:nth-child(1) {
             grid-area: a;
 
             .article {
                 &__picture {
                     height: 24.5rem;
+                }
+
+                &__cover {
+                    border-radius: 0.35rem 0.35rem 0 0;
                 }
             }
         }
@@ -53,6 +61,10 @@
                 &__picture {
                     height: 15rem;
                 }
+
+                &__cover {
+                    border-radius: 0.35rem 0 0 0.35rem;
+                }
             }
         }
 
@@ -63,6 +75,10 @@
                 &__picture {
                     height: 8rem;
                 }
+
+                &__cover {
+                    border-radius: 0.35rem 0.35rem 0 0;
+                }
             }
         }
 
@@ -72,6 +88,10 @@
             .article {
                 &__picture {
                     height: 8rem;
+                }
+
+                &__cover {
+                    border-radius: 0.35rem 0.35rem 0 0;
                 }
             }
         }

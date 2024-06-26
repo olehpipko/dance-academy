@@ -20,6 +20,9 @@
 
     &__logo {
         height: 3rem;
+
+        object-fit: contain;
+        object-position: left;
     }
 
     &__heading {
@@ -86,10 +89,23 @@
 }
 
 .partner {
-    max-width: calc((100% - 4rem) / 5);
+    max-width: min-content;
+    min-width: calc((100% - 4rem) / 5);
+    text-align: center;
+
+    font-size: 0.5rem;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
 
     &__picture {
-        width: 100%;
+        width: 4rem;
+        height: 4rem;
+
+        object-fit: contain;
     }
 }
 

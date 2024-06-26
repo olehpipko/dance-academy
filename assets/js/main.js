@@ -50,32 +50,32 @@ const createBannerCarousel = () => {
 
         onInit: () => {
             //  Size of block
-            const bannerBlock = document.querySelector('.banner__list');
-            const slides = [...bannerBlock.querySelectorAll('.banner__item')];
-            bannerBlock.style.height = `${slides[0].offsetHeight}px`;
+            // const bannerBlock = document.querySelector('.banner__list');
+            // const slides = [...bannerBlock.querySelectorAll('.banner__item')];
+            // bannerBlock.style.height = `${slides[0].offsetHeight}px`;
 
-            let maxHeight = slides[0].offsetHeight;
-            slides.forEach((slide) =>
-                slide.offsetHeight > maxHeight
-                    ? (maxHeight = slide.offsetHeight)
-                    : 0
-            );
+            // let maxHeight = slides[0].offsetHeight;
+            // slides.forEach((slide) =>
+            //     slide.offsetHeight > maxHeight
+            //         ? (maxHeight = slide.offsetHeight)
+            //         : 0
+            // );
 
             //  Navigation
             const bannerPrev = document.querySelector('.banner__nav--left');
             const bannerNext = document.querySelector('.banner__nav--right');
 
-            bannerPrev.style.top = bannerNext.style.top =
-                maxHeight / 2 - bannerPrev.offsetHeight / 2 + 'px';
+            // bannerPrev.style.top = bannerNext.style.top =
+            //     maxHeight / 2 - bannerPrev.offsetHeight / 2 + 'px';
 
             bannerPrev.onclick = () => banner.prev();
             bannerNext.onclick = () => banner.next();
         },
         onChange: () => {
             //  Size of block
-            banner.selector.style.height = `${
-                banner.innerElements[banner.currentSlide].offsetHeight
-            }px`;
+            // banner.selector.style.height = `${
+            //     banner.innerElements[banner.currentSlide].offsetHeight
+            // }px`;
 
             //  Navigation
             clearInterval(banner.runInterval);
@@ -143,6 +143,7 @@ const createNewsCarousel = (newsSelector = '.news__list') => {
                     dot.classList.remove('dots__button--current')
                 );
                 newsDots[0].classList.add('dots__button--current');
+
                 newsDots.forEach((dot, i) => {
                     dot.onclick = () => {
                         newsDots.forEach((dot) =>
@@ -164,9 +165,11 @@ const createNewsCarousel = (newsSelector = '.news__list') => {
                 newsDots.forEach((dot) =>
                     dot.classList.remove('dots__button--current')
                 );
-                newsDots[news.currentSlide].classList.add(
-                    'dots__button--current'
-                );
+                newsDots[
+                    news.currentSlide >= 0
+                        ? news.currentSlide
+                        : news.innerElements.length - 1
+                ].classList.add('dots__button--current');
             },
         });
 };

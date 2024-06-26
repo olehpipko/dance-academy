@@ -2,6 +2,11 @@
 @import './global/__colors';
 @import './global/__fonts';
 
+*:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.05rem $main-color;
+}
+
 *,
 *::before,
 *::after {
@@ -76,7 +81,8 @@ button {
 
         transition: all 0.1s;
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: $contrast-color;
             background-color: transparent;
 
@@ -92,4 +98,14 @@ button {
     @import './adaptive/desktop/__banner';
     @import './adaptive/desktop/__news';
     @import './adaptive/desktop/__promo';
+}
+
+@media (min-width: 1180px) {
+    .navigation {
+        &__link {
+            margin: 0;
+
+            font-size: 1rem;
+        }
+    }
 }
